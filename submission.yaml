@@ -1,0 +1,35 @@
+team:
+  name: "REPLACE_WITH_YOUR_TEAM_NAME"  # REQUIRED
+  track: "AI"  # AI | DevOps | Sustainability | Open
+  lead:
+    name: "Om Patel"  # REQUIRED
+    email: "REPLACE_WITH_LEAD_EMAIL"  # REQUIRED
+  members:
+    - name: "REPLACE_WITH_MEMBER_NAME"
+      email: "REPLACE_WITH_MEMBER_EMAIL"
+
+submission:
+  title: "Grid Guardian: Power Outage Prediction & Equipment Failure Advisor"
+  problem_statement: >
+    Power transformer and substation failures cause blackouts costing
+    utilities $1M+/hour and affecting millions of people. Most utilities
+    still use calendar-based maintenance, while sensors already measuring
+    temperature, vibration, partial discharge, and oil quality show
+    failure signatures weeks in advance. Weather events compound the
+    risk, but sensor data and weather forecasts are never combined in
+    time to act.
+  solution_summary: >
+    Grid Guardian fuses live asset sensor health, weather forecasts, and
+    historical incident records into one explainable composite risk
+    score per asset, ranks assets by grid impact severity (customers
+    served x criticality), and generates a prioritised maintenance plan
+    and a crew pre-positioning plan. The same risk/maintenance/crew logic
+    is exposed to IBM Bob via an MCP server, so Bob can answer live
+    questions about current grid risk rather than just having written
+    the code.
+  key_features:
+    - "Composite risk scoring that fuses sensor health, weather forecast, and historical incident data per asset"
+    - "Grid-impact-severity ranking (customers served x criticality) so prioritisation reflects real-world consequence"
+    - "Auto-generated, explainable maintenance plan with a recommended action and time window per at-risk asset"
+    - "Crew pre-positioning plan that assigns available crews to at-risk regions ahead of forecasted weather"
+    - "Live IBM Bob (MCP) integration exposing the same risk engine as callable tools, not just used to write the code"

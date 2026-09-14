@@ -1,0 +1,37 @@
+[
+  {
+    "crew_id": "CREW-1",
+    "base_region": "Vadodara",
+    "size": 4,
+    "specialty": "transformer_repair",
+    "available": true
+  },
+  {
+    "crew_id": "CREW-2",
+    "base_region": "Ahmedabad",
+    "size": 3,
+    "specialty": "substation_maintenance",
+    "available": true
+  },
+  {
+    "crew_id": "CREW-3",
+    "base_region": "Surat",
+    "size": 5,
+    "specialty": "emergency_response",
+    "available": true
+  },
+  {
+    "crew_id": "CREW-4",
+    "base_region": "Rajkot",
+    "size": 2,
+    "specialty": "distribution_repair",
+    "available": true
+  },
+  {
+    "crew_id": "CREW-5",
+    "base_region": "Anand",
+    "size": 3,
+    "specialty": "substation_maintenance",
+    "available": false
+  }
+]

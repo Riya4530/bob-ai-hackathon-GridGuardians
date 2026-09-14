@@ -1,0 +1,37 @@
+{
+  "Vadodara": {
+    "wind_speed_kmh": 34,
+    "precip_probability": 0.55,
+    "storm_alert": false,
+    "temperature_c": 33,
+    "forecast_window_hours": 48
+  },
+  "Ahmedabad": {
+    "wind_speed_kmh": 58,
+    "precip_probability": 0.78,
+    "storm_alert": true,
+    "temperature_c": 31,
+    "forecast_window_hours": 48
+  },
+  "Surat": {
+    "wind_speed_kmh": 72,
+    "precip_probability": 0.85,
+    "storm_alert": true,
+    "temperature_c": 30,
+    "forecast_window_hours": 48
+  },
+  "Rajkot": {
+    "wind_speed_kmh": 18,
+    "precip_probability": 0.20,
+    "storm_alert": false,
+    "temperature_c": 34,
+    "forecast_window_hours": 48
+  },
+  "Anand": {
+    "wind_speed_kmh": 41,
+    "precip_probability": 0.60,
+    "storm_alert": false,
+    "temperature_c": 32,
+    "forecast_window_hours": 48
+  }
+}

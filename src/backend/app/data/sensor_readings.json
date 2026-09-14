@@ -1,0 +1,58 @@
+{
+  "TX-101": {
+    "temperature_c": 78.5,
+    "vibration_mm_s": 4.1,
+    "partial_discharge_pc": 620,
+    "oil_quality_index": 0.62,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "TX-102": {
+    "temperature_c": 61.2,
+    "vibration_mm_s": 1.8,
+    "partial_discharge_pc": 180,
+    "oil_quality_index": 0.91,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "TX-203": {
+    "temperature_c": 83.0,
+    "vibration_mm_s": 5.6,
+    "partial_discharge_pc": 810,
+    "oil_quality_index": 0.48,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "TX-204": {
+    "temperature_c": 55.4,
+    "vibration_mm_s": 1.2,
+    "partial_discharge_pc": 95,
+    "oil_quality_index": 0.95,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "SS-305": {
+    "temperature_c": 88.9,
+    "vibration_mm_s": 6.3,
+    "partial_discharge_pc": 940,
+    "oil_quality_index": 0.39,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "TX-306": {
+    "temperature_c": 69.7,
+    "vibration_mm_s": 2.9,
+    "partial_discharge_pc": 340,
+    "oil_quality_index": 0.77,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "TX-407": {
+    "temperature_c": 58.1,
+    "vibration_mm_s": 1.5,
+    "partial_discharge_pc": 110,
+    "oil_quality_index": 0.93,
+    "timestamp": "2026-09-13T22:00:00Z"
+  },
+  "SS-508": {
+    "temperature_c": 74.6,
+    "vibration_mm_s": 3.7,
+    "partial_discharge_pc": 560,
+    "oil_quality_index": 0.68,
+    "timestamp": "2026-09-13T22:00:00Z"
+  }
+}

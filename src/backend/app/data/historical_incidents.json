@@ -1,0 +1,32 @@
+[
+  {
+    "region": "Vadodara",
+    "incidents_last_5y": 3,
+    "weather_correlated": 2,
+    "avg_outage_hours": 5.4
+  },
+  {
+    "region": "Ahmedabad",
+    "incidents_last_5y": 6,
+    "weather_correlated": 4,
+    "avg_outage_hours": 8.1
+  },
+  {
+    "region": "Surat",
+    "incidents_last_5y": 8,
+    "weather_correlated": 6,
+    "avg_outage_hours": 11.2
+  },
+  {
+    "region": "Rajkot",
+    "incidents_last_5y": 1,
+    "weather_correlated": 0,
+    "avg_outage_hours": 2.0
+  },
+  {
+    "region": "Anand",
+    "incidents_last_5y": 4,
+    "weather_correlated": 3,
+    "avg_outage_hours": 6.7
+  }
+]

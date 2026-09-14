@@ -1,0 +1,90 @@
+[
+  {
+    "id": "TX-101",
+    "name": "Vadodara Substation Transformer A",
+    "type": "power_transformer",
+    "region": "Vadodara",
+    "lat": 22.3072,
+    "lon": 73.1812,
+    "customers_served": 42000,
+    "criticality": 9,
+    "install_year": 2005
+  },
+  {
+    "id": "TX-102",
+    "name": "Vadodara Substation Transformer B",
+    "type": "power_transformer",
+    "region": "Vadodara",
+    "lat": 22.3080,
+    "lon": 73.1790,
+    "customers_served": 42000,
+    "criticality": 9,
+    "install_year": 2012
+  },
+  {
+    "id": "TX-203",
+    "name": "Ahmedabad Substation Transformer",
+    "type": "power_transformer",
+    "region": "Ahmedabad",
+    "lat": 23.0225,
+    "lon": 72.5714,
+    "customers_served": 28000,
+    "criticality": 7,
+    "install_year": 1998
+  },
+  {
+    "id": "TX-204",
+    "name": "Ahmedabad Feeder Transformer",
+    "type": "distribution_transformer",
+    "region": "Ahmedabad",
+    "lat": 23.0235,
+    "lon": 72.5730,
+    "customers_served": 9500,
+    "criticality": 5,
+    "install_year": 2016
+  },
+  {
+    "id": "SS-305",
+    "name": "Surat Substation",
+    "type": "substation",
+    "region": "Surat",
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "customers_served": 61000,
+    "criticality": 10,
+    "install_year": 2001
+  },
+  {
+    "id": "TX-306",
+    "name": "Surat Backup Transformer",
+    "type": "power_transformer",
+    "region": "Surat",
+    "lat": 21.1715,
+    "lon": 72.8330,
+    "customers_served": 15000,
+    "criticality": 6,
+    "install_year": 2009
+  },
+  {
+    "id": "TX-407",
+    "name": "Rajkot Distribution Transformer",
+    "type": "distribution_transformer",
+    "region": "Rajkot",
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "customers_served": 7200,
+    "criticality": 4,
+    "install_year": 2019
+  },
+  {
+    "id": "SS-508",
+    "name": "Anand Substation",
+    "type": "substation",
+    "region": "Anand",
+    "lat": 22.5645,
+    "lon": 72.9289,
+    "customers_served": 33000,
+    "criticality": 8,
+    "install_year": 2003
+  }
+]

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Grid Guardian — AI Power Grid Advisor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="top-header">
+
+
+<div class="brand-section">
+
+  <div class="brand-icon">
+    ⚡
+  </div>
+
+  <div>
+    <h1>Grid Guardian</h1>
+
+    <p class="subtitle">
+      AI-Powered Power Outage Prediction & Equipment Failure Advisor
+    </p>
+  </div>
+
+</div>
+
+<div class="system-status">
+  <span class="status-dot"></span>
+  <span>LIVE MONITORING</span>
+</div>
+
+
+  </header>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="tabs">
+
+
+<button
+  class="tab-btn active"
+  data-tab="overview">
+
+  <span class="tab-icon">◈</span>
+  Risk Overview
+
+</button>
+
+<button
+  class="tab-btn"
+  data-tab="maintenance">
+
+  <span class="tab-icon">⚙</span>
+  Maintenance Plan
+
+</button>
+
+<button
+  class="tab-btn"
+  data-tab="crew">
+
+  <span class="tab-icon">◉</span>
+  Crew Pre-Positioning
+
+</button>
+
+
+  </nav>
+
+  <main>
+
+
+<!-- ================= OVERVIEW ================= -->
+
+<section
+  id="overview"
+  class="tab-panel active">
+
+  <div class="section-heading">
+
+    <div>
+      <span class="eyebrow">REAL-TIME GRID INTELLIGENCE</span>
+
+      <h2>Risk Overview</h2>
+
+      <p>
+        AI-assisted assessment of equipment health, weather conditions
+        and historical outage patterns.
+      </p>
+    </div>
+
+    <div class="live-pill">
+      <span></span>
+      Auto-refresh: 10s
+    </div>
+
+  </div>
+
+
+  <div class="grid-2">
+
+
+    <!-- ================= RISK CHART ================= -->
+
+    <div class="card chart-card">
+
+      <div class="card-header">
+
+        <div>
+          <h3>Grid Impact Severity</h3>
+
+          <p>
+            Current risk score by monitored asset
+          </p>
+        </div>
+
+        <div class="card-indicator">
+          AI
+        </div>
+
+      </div>
+
+      <div id="riskChart"></div>
+
+    </div>
+
+
+    <!-- ================= RISK TABLE ================= -->
+
+    <div class="card">
+
+      <div class="card-header">
+
+        <div>
+          <h3>Risk Ranking</h3>
+
+          <p>
+            Highest-impact assets first
+          </p>
+        </div>
+
+        <div class="card-indicator">
+          LIVE
+        </div>
+
+      </div>
+
+      <div
+        id="riskTableWrap"
+        class="table-wrap">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MAINTENANCE ================= -->
+
+<section
+  id="maintenance"
+  class="tab-panel">
+
+  <div class="section-heading">
+
+    <div>
+
+      <span class="eyebrow">
+        AI RECOMMENDATIONS
+      </span>
+
+      <h2>
+        Prioritised Maintenance Plan
+      </h2>
+
+      <p>
+        Recommended maintenance actions based on current asset risk.
+      </p>
+
+    </div>
+
+    <div class="section-badge">
+      PRIORITY ENGINE
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="card-header">
+
+      <div>
+        <h3>Recommended Actions</h3>
+
+        <p>
+          Automatically updated from the risk engine
+        </p>
+      </div>
+
+      <div class="card-indicator">
+        LIVE
+      </div>
+
+    </div>
+
+    <div id="maintenanceList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CREW ================= -->
+
+<section
+  id="crew"
+  class="tab-panel">
+
+  <div class="section-heading">
+
+    <div>
+
+      <span class="eyebrow">
+        FIELD OPERATIONS
+      </span>
+
+      <h2>
+        Crew Pre-Positioning
+      </h2>
+
+      <p>
+        Prepare response teams near high-risk grid assets before an outage.
+      </p>
+
+    </div>
+
+    <div class="section-badge">
+      RESPONSE PLANNER
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="card-header">
+
+      <div>
+        <h3>Active Crew Assignments</h3>
+
+        <p>
+          Current recommended field positioning
+        </p>
+      </div>
+
+      <div class="card-indicator">
+        LIVE
+      </div>
+
+    </div>
+
+    <div id="crewList"></div>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+
+<div>
+  <strong>GRID GUARDIAN</strong>
+  <span> • AI Power Grid Operations</span>
+</div>
+
+<div>
+  FastAPI · IBM Bob · MCP
+</div>
+
+
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+name: Validate Submission
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Check required top-level files exist
+        run: |
+          required_files=(
+            "submission.yaml"
+            "README.md"
+            "CONTRIBUTING.md"
+            "docs/problem-statement.md"
+            "docs/solution-overview.md"
+            "docs/architecture.md"
+            "docs/setup-guide.md"
+            "demo/demo-video-link.txt"
+            "demo/live-demo-url.txt"
+          )
+          missing=0
+          for f in "${required_files[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then
+            exit 1
+          fi
+          echo "All required files present."
+
+      - name: Validate submission.yaml is well-formed and complete
+        run: |
+          python3 - << 'PYEOF'
+          import sys
+          import yaml
+
+          with open("submission.yaml") as f:
+              data = yaml.safe_load(f)
+
+          errors = []
+
+          def require(path, value):
+              if value is None or (isinstance(value, str) and (
+                  value.strip() == "" or value.strip().startswith("REPLACE_WITH")
+              )):
+                  errors.append(f"submission.yaml: '{path}' is empty or still a placeholder")
+
+          require("team.name", data.get("team", {}).get("name"))
+          require("team.lead.name", data.get("team", {}).get("lead", {}).get("name"))
+          require("team.lead.email", data.get("team", {}).get("lead", {}).get("email"))
+          require("submission.title", data.get("submission", {}).get("title"))
+          require("submission.problem_statement", data.get("submission", {}).get("problem_statement"))
+          require("submission.solution_summary", data.get("submission", {}).get("solution_summary"))
+
+          if not data.get("submission", {}).get("key_features"):
+              errors.append("submission.yaml: 'submission.key_features' is empty")
+
+          if errors:
+              for e in errors:
+                  print(f"::error::{e}")
+              sys.exit(1)
+
+          print("submission.yaml is valid and complete.")
+          PYEOF
+
+      - name: Check demo screenshots present
+        run: |
+          count=$(find demo/screenshots -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | wc -l)
+          if [ "$count" -lt 3 ]; then
+            echo "::warning::Only $count screenshot(s) found in demo/screenshots/ - at least 3 are required before final submission."
+          else
+            echo "$count screenshots found."
+          fi
+
+      - name: Check for leftover README placeholders
+        run: |
+          if grep -n "\[REPLACE" README.md; then
+            echo "::warning::README.md still contains [REPLACE...] placeholders - fill these in before final submission."
+          else
+            echo "No leftover placeholders found in README.md."
+          fi
